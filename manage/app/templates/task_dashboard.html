@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Task Dashboard</h2>
+    <table>
+        <tr>
+            <th><span class="blue">Title</span></th>
+            <th><span class="blue">Description</span></th>
+            <th><span class="blue">Assign To</span></th>
+            <th><span class="blue">Due Date</span></th>
+            <th><span class="blue">Priority</span></th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.title }}</td>
+                <td>{{ task.description }}</td>
+                <td>{{ task.assign_to }}</td>
+                <td>{{ task.duedate }}</td>
+                <td>{{ task.priority }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

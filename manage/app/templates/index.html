@@ -1,0 +1,17 @@
+<!-- app/templates/index.html -->
+
+ {% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>Hey {{first_name}}! Welcome to Task Manager</h1>
+        <p>This is the homepage of the Task Manager application.</p>
+        {% if name %}
+            <p>This application is designed using {{name|upper}}</p>
+        {% endif %}
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/task.jpeg') }}" alt="Peacock Image" class="center">
+    </div>
+{% endblock %} 
+
